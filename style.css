@@ -1,104 +1,110 @@
-/* Nowoczesny wygląd NewOS */
 body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center; /* Centrowanie napisu w pionie */
     align-items: center;
     min-height: 100vh;
-    background-color: #0f172a; /* Ciemne, nowoczesne tło */
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #0f172a;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden; /* Zapobiega przewijaniu na głównej */
+}
+
+/* ZAKŁADKI NA GÓRZE */
+.top-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
     color: white;
 }
 
+.nav-btn-disabled {
+    background: #1e293b;
+    color: #475569;
+    border: 1px solid #334155;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: not-allowed;
+}
+
+/* ŚRODEK STRONY */
 .hero-section {
     text-align: center;
-    padding: 20px;
 }
 
 .main-title {
-    font-size: 80px;
-    margin-bottom: 10px;
-    font-weight: 800;
-    letter-spacing: -2px;
-    background: linear-gradient(to right, #ffffff, #94a3b8);
+    font-size: 120px; /* Wielki napis */
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -5px;
+    background: linear-gradient(to bottom, #ffffff, #475569);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .tagline {
-    color: #94a3b8;
-    margin-bottom: 40px;
-    font-size: 1.2rem;
+    color: #64748b;
+    font-size: 1.5rem;
+    margin-top: -10px;
+    margin-bottom: 50px;
 }
 
-/* KONTENER NA PRZYCISKI */
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 900px;
+/* GŁÓWNY PRZYCISK */
+.main-cta {
+    font-size: 20px !important;
+    padding: 18px 45px !important;
+    border-radius: 50px !important; /* Bardziej zaokrąglony */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* BAZOWY STYL PRZYCISKU */
-.btn {
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-}
-
-/* Przycisk NIEBIESKI (Pobierz) */
 .btn-blue {
     background-color: #3b82f6;
     color: white;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
 }
 
 .btn-blue:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
     background-color: #2563eb;
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
-}
-
-/* Przyciski SZKLANE (Karty, Płyty) */
-.btn-glass {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.btn-glass:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Przycisk CZERWONY (AntyVirus) */
-.btn-red {
-    background-color: #ef4444;
-    color: white;
-}
-
-.btn-red:hover {
-    background-color: #dc2626;
-    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
-}
-
-/* PRZYCISK ZABLOKOWANY (Klucze) */
-.btn-lock {
-    background-color: #1e293b;
-    color: #475569;
-    cursor: not-allowed;
-    border: 1px solid #334155;
-}
-
-.btn-lock:active {
-    pointer-events: none; /* Sprawia, że kliknięcie nic nie robi */
 }
