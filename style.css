@@ -1,0 +1,104 @@
+/* Nowoczesny wygląd NewOS */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f172a; /* Ciemne, nowoczesne tło */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: white;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 80px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    background: linear-gradient(to right, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    color: #94a3b8;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+/* KONTENER NA PRZYCISKI */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+}
+
+/* BAZOWY STYL PRZYCISKU */
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Przycisk NIEBIESKI (Pobierz) */
+.btn-blue {
+    background-color: #3b82f6;
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-blue:hover {
+    transform: translateY(-3px);
+    background-color: #2563eb;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+}
+
+/* Przyciski SZKLANE (Karty, Płyty) */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Przycisk CZERWONY (AntyVirus) */
+.btn-red {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #dc2626;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+}
+
+/* PRZYCISK ZABLOKOWANY (Klucze) */
+.btn-lock {
+    background-color: #1e293b;
+    color: #475569;
+    cursor: not-allowed;
+    border: 1px solid #334155;
+}
+
+.btn-lock:active {
+    pointer-events: none; /* Sprawia, że kliknięcie nic nie robi */
+}
